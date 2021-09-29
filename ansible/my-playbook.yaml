@@ -5,7 +5,7 @@
   tasks: 
     - name: Install Python3 and docker
       apt: 
-        name: 
+        pkg: 
           - python3
           - docker
         update_cache: yes
