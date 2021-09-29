@@ -8,6 +8,7 @@
         pkg: 
           - python3
           - docker.io
+          - pip
         update_cache: yes
         state: present
     - name: Download and install docker-compose
