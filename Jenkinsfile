@@ -9,7 +9,7 @@ pipeline {
                         sh "scp -o StrictHostKeyChecking=no ansible/* root@3.16.68.133:/root"
 
                         withCredentials([sshUserPrivateKey(credentialsID: "ansible-server-key", keyFileVariable: 'keyfile')])
-                            sh "scp ${keyfile} root@3.137.185.142:/root/WinDevOps2020.pem"
+                            sh "scp ${keyfile} ubuntu@3.137.185.142:/home/ubuntu/WinDevOps2020.pem"
                     }
                 }
             }
