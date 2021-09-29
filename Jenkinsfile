@@ -26,7 +26,7 @@ pipeline {
                     remote.allowAnyHosts = true
 
                     withCredentials([sshUserPrivateKey(credentialsId: 'ansible-server-key', keyFileVariable: 'keyfile', usernameVariable: 'user')]){
-                        remote.user = ubuntu
+                        remote.user = user
                         remote.identityFile = keyfile
                         sshCommand remote: remote, command: "ls -l"
                     }
